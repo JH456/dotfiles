@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/panic/Dropbox/School/College/2017-2018/Semester 2/CS2110/grading/hw04/Huang_Shengyuan'
+let g:netrw_dirhist_2='/home/panic/Dropbox/configs'
+let g:netrw_dirhist_3='/home/panic/Dropbox/scripts'
+let g:netrw_dirhist_4='/home/panic'
+let g:netrw_dirhist_5='/home/panic/Dropbox'
+let g:netrw_dirhist_6='/home/panic/Dropbox/scripts'
+let g:netrw_dirhist_7='/home/panic/Dropbox/School/College/2017-2018/Semester 2/cx4220/projects/cse6220-Sp18-src/prog1-template'
+let g:netrw_dirhist_8='/home/panic'
