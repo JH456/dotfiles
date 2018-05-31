@@ -17,6 +17,7 @@
     set ruler
     set pastetoggle=<F3>
     set foldmethod=indent
+    set visualbell
     filetype on
     filetype plugin on
     autocmd FileType * setlocal foldenable foldlevel=20
@@ -25,13 +26,13 @@
 " Plugins (nerd tree/supertab get set up weirdly. Should reorganize a bit)
     call plug#begin('~/.vim/plugged')
         Plug 'morhetz/gruvbox'
-        Plug 'vim-elixir'
+        Plug 'elixir-lang/vim-elixir'
         " Plug 'YouCompleteMe'
-        Plug 'vim-javascript'
-        Plug 'syntastic'
-        Plug 'nerdcommenter'
-        Plug 'nerdtree'
-        Plug 'supertab'
+        Plug 'pangloss/vim-javascript'
+        Plug 'scrooloose/syntastic'
+        Plug 'scrooloose/nerdcommenter'
+        Plug 'scrooloose/nerdtree'
+        Plug 'ervandew/supertab'
         " Plug 'vimproc.vim'
         " Plug 'vimshell.vim'
     call plug#end()
