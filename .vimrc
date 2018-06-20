@@ -5,13 +5,13 @@
     set shiftwidth=4
     set smartindent
     set number
-    set colorcolumn=81
+    set colorcolumn=121
     set backspace=indent,eol,start
     set cmdheight=2
     set wildmenu
     set relativenumber
     set so=999
-    set autochdir
+    " set autochdir
     set cursorline
     set cursorcolumn
     set ruler
@@ -45,6 +45,7 @@
             syntax on
             hi Normal ctermbg=none
             highlight ErrorMsg ctermbg=Red
+            " Highlight trailing whitespace
             match ErrorMsg '\s\+$'
 
 
@@ -62,10 +63,14 @@
         let g:syntastic_javascript_checkers= ['jshint']
         let g:syntastic_c_compiler_options='-I/usr/lib/openmpi/include -std=gnu99 -pedantic -Wall -Werror -Wextra'
         let g:syntastic_cpp_compiler_options='-I/usr/lib/openmpi/include -std=c++11 -pedantic -Wall -Werror -Wextra'
-        let g:NERDTreeDirArrows='>'
+        " Disable syntastic for java files
+        let g:loaded_syntastic_java_javac_checker = 1
 
     " Nerd Commenter Stuff
         let g:NERDSpaceDelims = 1
+
+    " Nerd Tree Stuff
+        let g:NERDTreeDirArrows='>'
 
 " Skeleton Files
     autocmd BufNewFile *.java 0r ~/.vim/skeleton/skeleton.java|exec "%s/{filename}/" . expand('%:t:r') . "/g"|exec "%s/{date}/" . strftime('%m\/%d\/%y') . "/g"
@@ -76,11 +81,7 @@
 " Mappings
     " Global mappings
         map <F2> <ESC>:NERDTree<CR>
-        " map <Down> <Esc>ddp
-        " map <Up> <Esc>k<Down>k
-        " map <Right> >>
-        " map <Left> <<
-        "
+
     " Global normal mode mappings
         nmap <S-h> ^
         nmap <S-l> $
@@ -92,6 +93,11 @@
         nnoremap <Space> za
         nnoremap t :lnext<CR>
         nnoremap T :lprevious<CR>
+        nnoremap \\ :b#<CR>
+        nnoremap <Right> >>
+        nnoremap <Left> <<
+        nnoremap m 15j
+        nnoremap , 15k
 
     " Global visual mode mappings
         vmap <S-h> ^
@@ -112,6 +118,8 @@
         imap {} {}<ESC>i
         imap ;; <ESC>A;
         imap ;<CR> <ESC>A;<Right><CR>
+        imap :<CR> <ESC>A:<Right><CR>
+        imap .<CR> <ESC>A.<Right><CR>
         imap {<CR> <ESC>A<Space>{<Right><CR>}<ESC><Up>o
 
     " General C like language insert mode mappings
