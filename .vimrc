@@ -33,6 +33,7 @@
         Plug 'scrooloose/nerdcommenter'
         Plug 'scrooloose/nerdtree'
         Plug 'ervandew/supertab'
+        Plug 'plasticboy/vim-markdown'
         " Plug 'vimproc.vim'
         " Plug 'vimshell.vim'
     call plug#end()
@@ -47,7 +48,6 @@
             highlight ErrorMsg ctermbg=Red
             " Highlight trailing whitespace
             match ErrorMsg '\s\+$'
-
 
     " Syntastic Stuff
         set statusline+=%#warningmsg#
