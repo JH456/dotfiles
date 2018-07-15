@@ -34,14 +34,17 @@
         Plug 'scrooloose/nerdtree'
         Plug 'ervandew/supertab'
         Plug 'plasticboy/vim-markdown'
+        Plug 'KeitaNakamura/neodark.vim'
         " Plug 'vimproc.vim'
         " Plug 'vimshell.vim'
     call plug#end()
 
     " Colorscheme stuff
         " gruvbox
-            colorscheme gruvbox
-            set background=dark
+            " colorscheme gruvbox
+            " set background=dark
+        " neodark
+            colorscheme neodark
         " General stuff
             syntax on
             hi Normal ctermbg=none
