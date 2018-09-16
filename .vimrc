@@ -41,10 +41,10 @@
 
     " Colorscheme stuff
         " gruvbox
-            " colorscheme gruvbox
-            " set background=dark
+            colorscheme gruvbox
+            set background=dark
         " neodark
-            colorscheme neodark
+            " colorscheme neodark
         " General stuff
             syntax on
             hi Normal ctermbg=none
@@ -160,3 +160,20 @@
         autocmd FileType python :imap :<CR> <ESC>A:<Right><CR>
         autocmd FileType python :imap ~p print()
         autocmd FileType python :imap ;<CR> <ESC>A<Right><CR>
+
+    " Markdown accents for french
+        autocmd FileType markdown :imap e' é
+        autocmd FileType markdown :imap E' É
+        autocmd FileType markdown :imap e` è
+        autocmd FileType markdown :imap E` È
+        autocmd FileType markdown :imap e^ ê
+        autocmd FileType markdown :imap E^ Ê
+        autocmd FileType markdown :imap a` à
+        autocmd FileType markdown :imap A` À
+        autocmd FileType markdown :imap a^ â
+        autocmd FileType markdown :imap A^ Â
+        autocmd FileType markdown :imap o^ ô
+        autocmd FileType markdown :imap O^ Ô
+        autocmd FileType markdown :imap u` ù
+        autocmd FileType markdown :imap U` Ù
+        autocmd FileType markdown :imap oe œ
