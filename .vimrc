@@ -35,6 +35,7 @@
         Plug 'ervandew/supertab'
         Plug 'plasticboy/vim-markdown'
         Plug 'KeitaNakamura/neodark.vim'
+        Plug 'vim-scripts/LanguageTool'
         " Plug 'vimproc.vim'
         " Plug 'vimshell.vim'
     call plug#end()
@@ -64,7 +65,7 @@
         let g:syntastic_check_on_wq = 0
         let g:syntastic_python_checkers = ['flake8']
         let g:syntastic_javascript_checkers= ['jshint']
-        let g:syntastic_c_compiler_options='-I/usr/lib/openmpi/include -std=gnu99 -pedantic -Wall -Werror -Wextra'
+        let g:syntastic_c_compiler_options='-I/usr/lib/openmpi/include -std=gnu99 -pedantic -Wall -Werror -Wextra -Wstrict-prototypes -Wold-style-definition'
         let g:syntastic_cpp_compiler_options='-I/usr/lib/openmpi/include -std=c++11 -pedantic -Wall -Werror -Wextra'
         " Disable syntastic for java files
         let g:loaded_syntastic_java_javac_checker = 1
@@ -75,11 +76,19 @@
     " Nerd Tree Stuff
         let g:NERDTreeDirArrows='>'
 
+    " LanguageTool Stuff
+    :let g:languagetool_jar='$HOME/Downloads/LanguageTool-4.2/languagetool-commandline.jar'
+    :let g:languagetool_lang='fr'
+
 " Skeleton Files
     autocmd BufNewFile *.java 0r ~/.vim/skeleton/skeleton.java|exec "%s/{filename}/" . expand('%:t:r') . "/g"|exec "%s/{date}/" . strftime('%m\/%d\/%y') . "/g"
 
 " Indentation rules (The elixir plugin deals with elixir stuff)
     autocmd FileType html,css,ruby,scala :setlocal shiftwidth=2 tabstop=2
+
+" Editor configurations (excluding mappings)
+    " C files
+        autocmd FileType c,h :set colorcolumn=81
 
 " Mappings
     " Global mappings
@@ -176,4 +185,10 @@
         autocmd FileType markdown :imap O^ Ô
         autocmd FileType markdown :imap u` ù
         autocmd FileType markdown :imap U` Ù
+        autocmd FileType markdown :imap u^ û
+        autocmd FileType markdown :imap U^ Û
         autocmd FileType markdown :imap oe œ
+        autocmd FileType markdown :imap i^ î
+        autocmd FileType markdown :imap ~;  ;
+        autocmd FileType markdown :imap ~!  !
+        autocmd FileType markdown :imap ~?  ?
