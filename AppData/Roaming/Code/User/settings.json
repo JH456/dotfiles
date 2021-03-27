@@ -1,0 +1,105 @@
+{
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.colorTheme": "Monokai",
+    "vim.ignorecase": false,
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["H"],
+            "after": ["^"],
+        },
+        {
+            "before": ["L"],
+            "after": ["$"],
+        },
+        {
+            "before": ["m"],
+            "after": ["1", "5", "j"],
+        },
+        {
+            "before": [","],
+            "after": ["1", "5", "k"],
+        },
+        {
+            "before": ["]"],
+            "after": ["/", "]"],
+        },
+        {
+            "before": ["["],
+            "after": ["?", "[", "<ENTER>"],
+        },
+        {
+            "before": [")"],
+            "after": ["/", ")", "<ENTER>"],
+        },
+        {
+            "before": ["("],
+            "after": ["?", "(", "<ENTER>"],
+        },
+        {
+            "before": ["}"],
+            "after": ["/", "}", "<ENTER>"],
+        },
+        {
+            "before": ["{"],
+            "after": ["?", "{", "<ENTER>"],
+        },
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["H"],
+            "after": ["^"],
+        },
+        {
+            "before": ["L"],
+            "after": ["$"],
+        },
+        {
+            "before": ["m"],
+            "after": ["1", "5", "j"],
+        },
+        {
+            "before": [","],
+            "after": ["1", "5", "k"],
+        },
+        {
+            "before": ["]"],
+            "after": ["/", "]"],
+        },
+        {
+            "before": ["["],
+            "after": ["?", "[", "<ENTER>"],
+        },
+        {
+            "before": [")"],
+            "after": ["/", ")", "<ENTER>"],
+        },
+        {
+            "before": ["("],
+            "after": ["?", "(", "<ENTER>"],
+        },
+        {
+            "before": ["}"],
+            "after": ["/", "}", "<ENTER>"],
+        },
+        {
+            "before": ["{"],
+            "after": ["?", "{", "<ENTER>"],
+        },
+        {
+            "before": ["<SPACE>"],
+            "after": ["z", "a"],
+        },
+    ],
+    "vim.smartRelativeLine": true,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "yaml.schemas": {
+        "C:\\Users\\jimharris\\src\\DeclarativeDefinition.json": ["/*.dd.yml", "/*.dd.yaml", "/*.dd"]
+    },
+    "declarativeDiagnosticConfigs.adsToken": "",
+    "editor.lineNumbers": "relative",
+    "liveshare.authenticationProvider": "Microsoft",
+    "window.zoomLevel": -1,
+}
