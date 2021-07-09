@@ -15,7 +15,7 @@
     set cursorline
     set cursorcolumn
     set ruler
-    set pastetoggle=<F3>
+    set pastetoggle=##
     set foldmethod=indent
     set visualbell
     filetype on
@@ -36,6 +36,9 @@
         Plug 'plasticboy/vim-markdown'
         Plug 'KeitaNakamura/neodark.vim'
         Plug 'vim-scripts/LanguageTool'
+        Plug 'leafgarland/typescript-vim'
+        Plug 'Quramy/tsuquyomi'
+        " Plug 'quramy/tsuquyomi/'
         " Plug 'vimproc.vim'
         " Plug 'vimshell.vim'
     call plug#end()
@@ -64,6 +67,9 @@
         let g:syntastic_check_on_open = 1
         let g:syntastic_check_on_wq = 0
         let g:syntastic_python_checkers = ['flake8']
+        let g:tsuquyomi_disable_quickfix = 1
+        let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker.
+        let g:syntastic_ts_checkers = ['tsc']
         let g:syntastic_javascript_checkers= ['jshint']
         let g:syntastic_c_compiler_options='-I/usr/lib/openmpi/include -std=gnu99 -pedantic -Wall -Werror -Wextra -Wstrict-prototypes -Wold-style-definition'
         let g:syntastic_cpp_compiler_options='-I/usr/lib/openmpi/include -std=c++11 -pedantic -Wall -Werror -Wextra'
@@ -92,7 +98,7 @@
 
 " Mappings
     " Global mappings
-        map <F2> <ESC>:NERDTree<CR>
+        nnoremap nt <ESC>:NERDTree<CR>
 
     " Global normal mode mappings
         nmap <S-h> ^
